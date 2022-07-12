@@ -1,14 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { carFactory, testCar } from './helpers';
+import { writeCarData } from './utils/base';
+
 
 
 const AddCar = () => {
 
     const [cars, setCars] = useState([]);
 
-    const testCar2 = { inv: "A02"};
+    const addToCars = (car) => {
+        setCars([...cars, car])
+    }
+
+
     
-    const addCar = (e) => {
+    const handleSubmit = (e) => {
+
         e.preventDefault();
         const formData = e.target.form;
 
@@ -18,14 +25,22 @@ const AddCar = () => {
         const model = formData.model.value;
         const vin = formData.vin.value;
 
-        console.log(inv, year, make, model, vin);
 
         const newCar = carFactory(inv, year, make, model, vin);
-        setCars([...cars, newCar])
+        
+        addToCars(newCar);
+        console.log(newCar);
+
+        writeCarData(newCar);
+
+
 
         formData.reset();
 
+
     };
+
+
 
 
 
@@ -41,7 +56,7 @@ const AddCar = () => {
             <input type="text" name="make" placeholder="Make"/>
             <input type="text" name="model" placeholder="Model"/>
             <input type="text" name="vin" placeholder="VIN"/>
-            <button type="submit" onClick={addCar}>Submit</button>
+            <button type="submit" onClick={handleSubmit}>Submit</button>
             </form>
         </div>
     );

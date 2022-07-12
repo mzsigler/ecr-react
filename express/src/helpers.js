@@ -1,4 +1,5 @@
 function carFactory(inv, year, make, model, vin) {
+    const today = new Date();
     return {
     inv: inv,
     year: year,
@@ -6,6 +7,7 @@ function carFactory(inv, year, make, model, vin) {
     model: model,
     vin: vin, 
     id: Math.floor(Math.random() * 16777215).toString(16),
+    dateAdded: today.toString(),
     miles: 0,
     oilMiles: 0,
     brakeMiles: 0,
