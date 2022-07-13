@@ -13,19 +13,18 @@ import ViewCars from './ViewCars';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-  <BrowserRouter>
-   <Routes>
+      <BrowserRouter>
+  <Routes>
 
-    <Route path="/" element={<App />}/>
-    <Route path="/taxCalc" element={<TaxCalc />}/>
-    <Route path="/addCar" element={<AddCar />}/>
-    <Route path="/viewCars" element={<ViewCars />}/>
-    <Route path="/balDue" element={<BalanceDue />}/>
+   <Route path="/" element={<App />}/>
+   <Route path="/taxCalc" element={<TaxCalc />}/>
+   <Route path="/addCar" element={<AddCar />}/>
+   <Route path="/viewCars" element={<ViewCars />}/>
+   <Route path="/balDue" element={<BalanceDue />}/>
 
-   </Routes>
-  </BrowserRouter>
-  </React.StrictMode>
+  </Routes>
+ </BrowserRouter>
+
 );
 
 // If you want to start measuring performance in your app, pass a function

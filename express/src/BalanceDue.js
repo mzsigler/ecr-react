@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Header from './Header';
+import Navigation from './Navigation';
 
 const BalanceDue = () => {
 
@@ -6,7 +8,9 @@ const BalanceDue = () => {
 
     return (
         <div>
-            <p>I'm the Balance Due App!</p>
+         <Header />
+         <Navigation />
+         <p>I'm the Balance Due App!</p>
         </div>
     );
 }
