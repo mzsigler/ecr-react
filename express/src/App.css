@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
+  gap: 16px;
 }
 
 .navigation button {

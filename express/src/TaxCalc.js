@@ -1,7 +1,6 @@
 import React from 'react';
 import { useRef, useState } from 'react';
-import Header from './Header';
-import Navigation from './Navigation';
+
 
 const TaxCalc = () => {
 
@@ -23,8 +22,6 @@ const TaxCalc = () => {
 
     return (
         <div>
-            <Header />
-            <Navigation />
             <form name='taxCalcForm'>
                 <input type='number' ref={salePriceRef} name="salePrice" placeholder='0' onKeyUp={calculateTax}/>
             </form>

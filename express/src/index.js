@@ -6,24 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter,
 Routes,
 Route } from 'react-router-dom';
-import TaxCalc from './TaxCalc';
-import AddCar from './AddCar';
-import BalanceDue from './BalanceDue';
-import ViewCars from './ViewCars';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
       <BrowserRouter>
-  <Routes>
-
-   <Route path="/" element={<App />}/>
-   <Route path="/taxCalc" element={<TaxCalc />}/>
-   <Route path="/addCar" element={<AddCar />}/>
-   <Route path="/viewCars" element={<ViewCars />}/>
-   <Route path="/balDue" element={<BalanceDue />}/>
-
-  </Routes>
- </BrowserRouter>
+        <App />
+      </BrowserRouter>
 
 );
 

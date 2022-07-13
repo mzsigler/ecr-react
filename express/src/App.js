@@ -11,16 +11,17 @@ import BalanceDue from './BalanceDue';
 
 function App() {
 
+  const [cars, setCars] = useState([])
+  
 
 
   return (
     <div className="App">
       <Header />
       <Navigation />
-      <h2>Make a selection above to do stuff.</h2>
       <Routes>
         <Route path="/taxCalc" element={<TaxCalc />}/>
-        <Route path="/addCar" element={<AddCar />}/>
+        <Route path="/addCar" element={<AddCar cars={cars} setCars={setCars}/>}/>
         <Route path="/viewCars" element={<ViewCars />}/>
         <Route path="/balDue" element={<BalanceDue />}/>
       </Routes>
