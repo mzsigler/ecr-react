@@ -1,42 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
-import { 
-  BrowserRouter,
+import { BrowserRouter,
   Routes,
-  Route,
-} from "react-router-dom";
+  Route } from 'react-router-dom';
+import { useState } from 'react';
 import Header from './Header';
 import Navigation from './Navigation';
-import Display from './Display';
 
 
 function App() {
-
-  const [nav, setNav] = useState('');
-
-  const taxCalcClick = () => {
-    nav === 'taxCalc' ? setNav('') : setNav("taxCalc");
-  };
-
-  const balDueClick = () => {
-    nav === 'balDue' ? setNav('') : setNav("balDue");
-  };
-
-  const addCarClick = () => {
-    nav === 'addCar' ? setNav('') : setNav("addCar");
-  };
-
 
 
 
   return (
     <div className="App">
       <Header />
-      <Navigation taxCalcClick={taxCalcClick}
-       balDueClick={balDueClick}
-       addCarClick={addCarClick}/>
-      <Display nav={nav}/>
+      <Navigation />
+      <h2>Make a selection above to do stuff.</h2>
     </div>
   );
 }

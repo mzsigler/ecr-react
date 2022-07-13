@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { carFactory, testCar } from './helpers';
 import { writeCarData } from './utils/base';
+import Header from './Header';
+import Navigation from './Navigation';
 
 
 
@@ -47,7 +49,9 @@ const AddCar = () => {
 
 
     return (
-        <div>
+        <div className='add-car'>
+            <Header />
+            <Navigation />
             <p>Maintenance</p>
             <h3>Add a Car</h3>
             <form name="add-car" className='addCarForm'>
