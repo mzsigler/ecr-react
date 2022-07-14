@@ -19,20 +19,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-ul {
-  list-style: none;
-  display: flex;
-  gap: 10px;
-}
-
-.add-car {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-}
-
-.navigation {
-  border: 1px solid black;
-  padding: 16px;
-}

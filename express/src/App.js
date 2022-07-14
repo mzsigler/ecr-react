@@ -11,7 +11,8 @@ import BalanceDue from './BalanceDue';
 
 function App() {
 
-  const [cars, setCars] = useState([])
+  const [cars, setCars] = useState([]);
+  const [customer, setCustomer] = useState([]);
   
 
 
@@ -23,7 +24,9 @@ function App() {
         <Route path="/taxCalc" element={<TaxCalc />}/>
         <Route path="/addCar" element={<AddCar cars={cars} setCars={setCars}/>}/>
         <Route path="/viewCars" element={<ViewCars />}/>
-        <Route path="/balDue" element={<BalanceDue />}/>
+        <Route path="/balDue" element={<BalanceDue 
+        customer={customer} 
+        setCustomer={setCustomer}/>}/>
       </Routes>
     </div>
   );
